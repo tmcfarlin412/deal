@@ -1,3 +1,4 @@
+import 'package:deal/new_game.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -14,15 +15,17 @@ class HomePage extends StatelessWidget {
                   children: <Widget>[
                     Text('Welcome to Deal!'),
                     RaisedButton(
-                      onPressed: () async {
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => NewGamePage()));
                       },
-                      child: Text('Join a game'),
+                      child: Text('New game'),
                     ),
                     RaisedButton(
                       onPressed: () async {
                       },
-                      child: Text('Create new game'),
-                    )
+                      child: Text('Join game'),
+                    ),
                   ]
                 )
             )
